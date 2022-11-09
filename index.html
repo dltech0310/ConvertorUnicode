@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Chinese characters to Unicode</title>
+    <link rel="icon" href="./icons8-rich-text.png" type="image/icon type">
+    <script type="text/javascript" src="convertToEntities.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            background-color: rgba(224, 224, 224, 0.781);
+        }
+        .mainContainer{
+            /* border: 1px solid red; */
+            padding: 10px 100px;
+            
+        }
+        .container{
+            /* border: 1px solid green; */
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+        textarea{
+            width: 99%;
+            margin: 0 auto;
+            border: 1px solid #a7a7a7;
+            height: 220px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .btn{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #16C172;
+            color: #fff;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: #38d48b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <h1 style="text-align: center;margin-top:5px;">Convert Chinese characters to Unicode</h1>
+        <div class="container">
+            <h3>Input your text:</h3>
+                <form method="post"  action="index.html" name="form">
+                    
+                    <textarea name="unicode" rows="5"> </textarea>
+                    <br/>
+                    <input class="btn" type="button" name="convert" value="Convert"  onclick="convertToEntities()" /> 
+                    <input class="btn" style="background-color:#a7a7a7;" type="reset" name="clear" value="Clear Results" /> <br />
+                        <h3>Results:</h3>
+                    <textarea name="entity" rows="10" readonly="readonly" id="output"> </textarea>
+                </form>
+        </div>
+    </div>
+
+</body>
+</html>
